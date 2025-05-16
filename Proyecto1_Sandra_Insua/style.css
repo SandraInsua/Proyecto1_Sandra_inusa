@@ -1,0 +1,146 @@
+:root {
+    --main-color: #75bb7e;
+    --accent-color: #c5a6e2;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --font: 'Roboto', sans-serif;
+    --spacing: 20px;
+    --radius: 8px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--main-color);
+    color: white;
+    padding: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: var(--spacing);
+    background-color: #eafcff;
+  }
+  
+  main {
+    padding: var(--spacing);
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 10px;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing);
+    list-style: none;
+    margin-top: var(--spacing);
+  }
+  
+  .productos-grid article {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .productos-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .categorias {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: var(--spacing) 0;
+  }
+  
+  .categorias li {
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: var(--radius);
+  }
+  
+  footer {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing);
+    margin-top: var(--spacing);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .productos-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .categorias {
+      flex-direction: column;
+    }
+  }
+  
